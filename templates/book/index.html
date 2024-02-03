@@ -1,0 +1,21 @@
+{% extends 'core/core.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+    <div class="books">
+        {% for book in books %}
+            <div class="book">
+                <div class="book-content book-img">
+                    <img src="{{ book.image.url }}" alt="">
+                </div>
+                <div class="book-content book-name">
+                    {{ book.name }}
+                </div>
+                <div class="book-content book-rating">
+                    {{ book.rating }}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock body %}

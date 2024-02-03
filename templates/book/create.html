@@ -1,0 +1,14 @@
+{% extends 'core/core.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}Register a book{% endblock title %}
+
+{% block body %}
+    <div class="create-form form">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <input type="submit" class="submit-btn" value="Submit">
+        </form>
+    </div>
+{% endblock body %}
